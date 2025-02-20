@@ -1,186 +1,205 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="the_style.css">
-        <style>.upper-top-part {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 10px;
-}
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Universitas Indonesia</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="the_style.css">
+    <style>
+        /* Header Section */
+        .upper-top-part {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 10px;
+            background-color: #b71c1c;
+        }
 
-.upper-top-part .w3-half {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+        .upper-top-part .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-.logger {
-    display: flex;
-    gap: 10px;
-}
+        .logger {
+            display: flex;
+            gap: 10px;
+        }
 
+        .w3-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            width: auto;
+            background-color: #f5f5f5;
+            color: #b71c1c;
+            border-radius: 5px;
+            text-decoration: none;
+        }
 
+        .w3-button:hover {
+            background-color: #ffebee;
+        }
 
-.content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    align-items: center;
-}
+        /* Responsive Button Layout */
+        @media (max-width: 768px) {
+            .w3-button {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+        }
 
-.content img {
-    max-width: 100%;
-    height: auto;
-}
+        /* Main Content Section */
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
 
-/* For small screens, make it a single column */
-@media (max-width: 768px) {
-    .content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-}
+        .content img {
+            max-width: 100%;
+            height: auto;
+        }
 
+        /* Mobile View */
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
 
-.w3-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    width: auto;
-}
+        /* Footer */
+        footer {
+            background-color: #b71c1c;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
 
-@media (max-width: 768px) {
-    .w3-button {
-        width: 100%; /* Full width on small screens */
-        margin-bottom: 5px;
-    }
-}
-footer {
-    background-color: #b71c1c; /* Dark Red */
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 10px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
 
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 10px 20px;
-}
+        .footer-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
 
-/* Quick Links */
-.footer-links {
-    display: flex;
-    gap: 15px;
-}
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 5px 10px;
+        }
 
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-}
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
 
-.footer-links a:hover {
-    text-decoration: underline;
-}
+        .footer-social {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
 
-/* Social Media Icons */
-.footer-social {
-    display: flex;
-    gap: 10px;
-}
+        .footer-social img {
+            width: 30px;
+            height: auto;
+        }
 
-.footer-social img {
-    width: 30px;
-    height: auto;
-}
+        .footer-bottom {
+            margin-top: 10px;
+            font-size: 14px;
+        }
 
-/* Copyright Section */
-.footer-bottom {
-    margin-top: 10px;
-    font-size: 14px;
-}
+        /* 📱 Mobile Responsive Footer */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
 
-/* 📱 Responsive Design */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
-    }
+            .footer-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 5px;
+            }
 
-    .footer-links {
-        flex-direction: column;
-        gap: 10px;
-    }
+            .footer-social {
+                justify-content: center;
+                gap: 15px;
+            }
 
-    .footer-social {
-        justify-content: center;
-    }
-}
+            .footer-social img {
+                width: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
 
-        </style>
-    </head>
-
-    <body>
-        <div class="w3-container w3-red upper-top-part">
-            <div class=" w3-half w3-container w3-crimson">
-                <img src="Makara_of_Universitas_Indonesia.svg.png" alt="" class="w3-image" width="50" height="50">
-                <a href="" class="w3-button">information</a>
-                <a href="" class="w3-button">Students</a>
-            </div>
-
-            
-                <div class="logger">
-                    <a href="" class="w3-button">sign up</a>
-                    <a href="" class="w3-button">log in</a>
-                </div>
-            </div>
-        
-
-
-
-        <div class="content w3-container">
-
-            <div class="w3-half descriptive-content">
-                <h3>Some Hook</h3>
-                <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
-            </div>
-            <div class="w3-half">
-                <img src="Makara_of_Universitas_Indonesia.svg.png" width="550" height="550">
-            </div>
+    <!-- Header -->
+    <div class="w3-container upper-top-part">
+        <div class="logo">
+            <img src="Makara_of_Universitas_Indonesia.svg.png" alt="University Logo" width="50" height="50">
+            <a href="#" class="w3-button">Information</a>
+            <a href="#" class="w3-button">Students</a>
         </div>
 
-        <footer>
-
-    <div class="footer-container">
-
-        <!-- Middle Section: Quick Links -->
-        <div class="footer-links">
-            <a href="#">About Us</a>
-            <a href="#">Admissions</a>
-            <a href="#">Academics</a>
-            <a href="#">Contact</a>
-        </div>
-
-        <!-- Right Section: Social Media -->
-        <div class="footer-social">
-            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        <div class="logger">
+            <a href="#" class="w3-button">Sign Up</a>
+            <a href="#" class="w3-button">Log In</a>
         </div>
     </div>
 
-    <!-- Copyright -->
-    <div class="footer-bottom">
-        <p>&copy; 2024 Universitas Indonesia. All rights reserved.</p>
+    <!-- Content -->
+    <div class="content w3-container">
+        <div class="w3-half descriptive-content">
+            <h3>Some Hook</h3>
+            <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum</p>
+        </div>
+        <div class="w3-half">
+            <img src="Makara_of_Universitas_Indonesia.svg.png" width="550" height="550" alt="University Image">
+        </div>
     </div>
-        </footer>
-    </body>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="#">About Us</a>
+                <a href="#">Admissions</a>
+                <a href="#">Academics</a>
+                <a href="#">Contact</a>
+            </div>
+
+            <div class="footer-social">
+                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 Universitas Indonesia. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
 </html>
