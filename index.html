@@ -59,7 +59,71 @@
         margin-bottom: 5px;
     }
 }
+footer {
+    background-color: #b71c1c; /* Dark Red */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
 
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+}
+
+/* Quick Links */
+.footer-links {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Social Media Icons */
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social img {
+    width: 30px;
+    height: auto;
+}
+
+/* Copyright Section */
+.footer-bottom {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}
 
         </style>
     </head>
@@ -92,5 +156,31 @@
                 <img src="Makara_of_Universitas_Indonesia.svg.png" width="550" height="550">
             </div>
         </div>
+
+        <footer>
+
+    <div class="footer-container">
+
+        <!-- Middle Section: Quick Links -->
+        <div class="footer-links">
+            <a href="#">About Us</a>
+            <a href="#">Admissions</a>
+            <a href="#">Academics</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <!-- Right Section: Social Media -->
+        <div class="footer-social">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        <p>&copy; 2024 Universitas Indonesia. All rights reserved.</p>
+    </div>
+        </footer>
     </body>
 </html>
