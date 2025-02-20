@@ -6,24 +6,66 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <link rel="stylesheet" href="the_style.css">
         <style>
-        .logger {
-            text-align: right;
-            padding-right: 20px; /* Adjust as needed */
-        }
-        .content{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-left: 100px;
-            margin-top: 50px;
-        }
+            /* Top Navigation */
+            .upper-top-part {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: center;
+                padding: 10px;
+            }
+    
+            .logger {
+                text-align: right;
+            }
+    
+            /* Responsive Content Section */
+            .content {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                padding: 20px; /* Better than margin-left */
+            }
+    
+            .descriptive-content {
+                flex: 1;
+                min-width: 300px;
+            }
+    
+            .content img {
+                max-width: 100%;
+                height: auto;
+            }
+    
+            /* Mobile Adjustments */
+            @media screen and (max-width: 768px) {
+                .upper-top-part {
+                    flex-direction: column;
+                    align-items: center;
+                }
+    
+                .logger {
+                    text-align: center;
+                    margin-top: 10px;
+                }
+    
+                .content {
+                    flex-direction: column;
+                    text-align: center;
+                }
+    
+                .descriptive-content {
+                    width: 100%;
+                }
+            }
         </style>
     </head>
 
     <body>
         <div class="w3-container w3-red upper-top-part">
             <div class=" w3-half w3-container w3-crimson">
-                <img src="Makara_of_Universitas_Indonesia.svg.png" alt="" width="50" height="50">
+                <img src="Makara_of_Universitas_Indonesia.svg.png" alt="" class="w3-image" width="50" height="50">
                 <a href="" class="w3-button">information</a>
                 <a href="" class="w3-button">Students</a>
             </div>
