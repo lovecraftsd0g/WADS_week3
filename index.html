@@ -5,60 +5,62 @@
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <link rel="stylesheet" href="the_style.css">
-        <style>
-            /* Top Navigation */
-            .upper-top-part {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-                align-items: center;
-                padding: 10px;
-            }
-    
-            .logger {
-                text-align: right;
-            }
-    
-            /* Responsive Content Section */
-            .content {
-                display: flex;
-                flex-wrap: wrap;
-                align-items: center;
-                justify-content: space-between;
-                padding: 20px; /* Better than margin-left */
-            }
-    
-            .descriptive-content {
-                flex: 1;
-                min-width: 300px;
-            }
-    
-            .content img {
-                max-width: 100%;
-                height: auto;
-            }
-    
-            /* Mobile Adjustments */
-            @media screen and (max-width: 768px) {
-                .upper-top-part {
-                    flex-direction: column;
-                    align-items: center;
-                }
-    
-                .logger {
-                    text-align: center;
-                    margin-top: 10px;
-                }
-    
-                .content {
-                    flex-direction: column;
-                    text-align: center;
-                }
-    
-                .descriptive-content {
-                    width: 100%;
-                }
-            }
+        <style>.upper-top-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.upper-top-part .w3-half {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logger {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* For small screens, make it a single column */
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+
+.w3-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .w3-button {
+        width: 100%; /* Full width on small screens */
+        margin-bottom: 5px;
+    }
+}
+
+
         </style>
     </head>
 
